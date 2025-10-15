@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "capabilities": "Yetenekler",
+    "services": "Hizmetler",
+    "contact": "İletişim",
+    "requestQuote": "Teklif İste"
+  },
+  "hero": {
+    "badge": "PREMIUM GİYİM ÜRETİMİ",
+    "title": "Mısır Zanaatkarlığı Küresel Standartlarla Buluşuyor",
+    "description": "İskenderiye, Mısır'dan dünya standartlarında giyim üretimi. Rekabetçi fiyatlandırma, olağanüstü kalite ve uluslararası markalar için stratejik lojistik.",
+    "getQuote": "Teklif Alın",
+    "ourCapabilities": "Yeteneklerimiz"
+  },
+  "stats": {
+    "yearsExperience": "Yıl Deneyim",
+    "skilledWorkers": "Kalifiye İşçi",
+    "unitsPerMonth": "Ünite/Ay",
+    "onTimeDelivery": "Zamanında Teslimat"
+  },
+  "whyEgypt": {
+    "title": "Neden Mısır Üretimi?",
+    "subtitle": "İskenderiye'yi ideal üretim ortağınız yapan stratejik avantajlar",
+    "strategicLocation": {
+      "title": "Stratejik Konum",
+      "desc": "İskenderiye limanı Avrupa, Orta Doğu ve Afrika'ya kolay erişim sağlar. AB ve ABD pazarları ile tercihli ticaret anlaşmaları."
+    },
+    "costCompetitive": {
+      "title": "Maliyet Avantajlı",
+      "desc": "Kaliteden ödün vermeden Batı üretimine göre %30-40 maliyet tasarrufu. Standartları korurken kar marjlarınızı maksimize edin."
+    },
+    "exportReady": {
+      "title": "İhracata Hazır",
+      "desc": "ISO 9001:2015 sertifikalı. Uluslararası standartlara tam uyum ve küresel nakliye lojistiğinde deneyim."
+    }
+  },
+  "capabilities": {
+    "title": "Yeteneklerimiz",
+    "subtitle": "Premium giyim üretimi için gelişmiş altyapı",
+    "manufacturing": {
+      "title": "Üretim Tesisleri",
+      "items": [
+        "300+ endüstriyel dikiş makinesi",
+        "Gelişmiş kesim ve kalıp yapma teknolojisi",
+        "Dahili nakış ve baskı hizmetleri",
+        "Kalite kontrol laboratuvarı",
+        "Modern kumaş depolama ve işleme sistemleri"
+      ]
+    },
+    "production": {
+      "title": "Üretim Süreci",
+      "items": [
+        "Numune geliştirme ve prototipleme",
+        "Kumaş tedarik ve satın alma desteği",
+        "Kalite kontrol noktalarıyla toplu üretim",
+        "Son işlem ve paketleme hizmetleri",
+        "Küresel nakliye ve lojistik koordinasyonu"
+      ]
+    },
+    "badges": {
+      "flexibleMOQs": {
+        "title": "Esnek Minimum Sipariş",
+        "desc": "Küçük partilerden büyük siparişlere"
+      },
+      "skilledTeam": {
+        "title": "Uzman Ekip",
+        "desc": "500+ deneyimli çalışan"
+      },
+      "isoCertified": {
+        "title": "ISO Sertifikalı",
+        "desc": "Kalite yönetim sistemi"
+      }
+    }
+  },
+  "services": {
+    "title": "Ne Üretiyoruz",
+    "subtitle": "Uluslararası markalar için kapsamlı giyim üretimi",
+    "items": [
+      {
+        "title": "Tişörtler ve Üstler",
+        "desc": "Özel baskılı ve sade tişörtler, polo tişörtler, atlet"
+      },
+      {
+        "title": "Aktif Giyim",
+        "desc": "Performans spor giyim, yoga pantolonları, spor salonu kıyafetleri"
+      },
+      {
+        "title": "Elbiseler ve Etekler",
+        "desc": "Moda elbiseleri, günlük etekler, resmi kıyafetler"
+      },
+      {
+        "title": "Dış Giyim",
+        "desc": "Ceketler, kapüşonlular, sweatshirtler, montlar"
+      },
+      {
+        "title": "Örme Giyim",
+        "desc": "Kazaklar, hırkalar, örme aksesuarlar"
+      },
+      {
+        "title": "Üniformalar",
+        "desc": "Kurumsal üniformalar, okul üniformaları, iş kıyafetleri"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bir Sonraki Projenizi Başlatmaya Hazır mısınız?",
+    "description": "Premium üretim, rekabetçi fiyatlandırma ve Mısır'dan dünyaya güvenilir teslimat için SAKTILE ile ortaklık yapın.",
+    "button": "Bugün Teklif İsteyin"
+  },
+  "contact": {
+    "title": "İletişime Geçin",
+    "subtitle": "Üretim ihtiyaçlarınızı konuşalım",
+    "info": {
+      "title": "İletişim Bilgileri",
+      "location": {
+        "label": "Fabrika Konumu",
+        "value": "Alexandria Sanayi Bölgesi\nİskenderiye, Mısır"
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+20 (XXX) XXX-XXXX"
+      },
+      "email": {
+        "label": "E-posta",
+        "value": "info@saktile.com"
+      }
+    },
+    "businessHours": {
+      "title": "Çalışma Saatleri",
+      "text": "Pazar - Perşembe: 08:00 - 17:00 (EEST)\nCuma - Cumartesi: Kapalı"
+    },
+    "form": {
+      "title": "Teklif İste",
+      "companyName": "Şirket Adı",
+      "contactPerson": "İletişim Kişisi",
+      "email": "E-posta Adresi",
+      "projectDetails": "Proje Detayları",
+      "projectDetailsPlaceholder": "Giyim üretim ihtiyaçlarınız, miktarlar, zaman çizelgesi hakkında bize bilgi verin...",
+      "submit": "Sorgu Gönder"
+    }
+  },
+  "footer": {
+    "description": "İskenderiye, Mısır'dan dünyaya premium giyim üretimi.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "services": "Hizmetler",
+    "certifications": "Sertifikalar",
+    "copyright": "© 2025 SAKTILE. Tüm hakları saklıdır. | İskenderiye, Mısır",
+    "servicesItems": [
+      "Tişörtler ve Üstler",
+      "Aktif Giyim",
+      "Dış Giyim",
+      "Üniformalar"
+    ],
+    "certificationsItems": [
+      "ISO 9001:2015",
+      "WRAP Sertifikalı",
+      "OEKO-TEX Standardı"
+    ]
+  },
+  "brand": {
+    "name": "SAKTILE",
+    "location": "İskenderiye, Mısır"
+  }
+}

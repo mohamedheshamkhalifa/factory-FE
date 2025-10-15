@@ -1,0 +1,36 @@
+<!-- Why Egypt Section -->
+<section class="why-egypt-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        {{ t('whyEgypt.title') }}
+      </h2>
+      <p class="section-subtitle">
+        {{ t('whyEgypt.subtitle') }}
+      </p>
+    </div>
+
+    <div class="features-grid">
+      @for (item of [
+        {
+          icon: '🌍',
+          key: 'strategicLocation'
+        },
+        {
+          icon: '📈',
+          key: 'costCompetitive'
+        },
+        {
+          icon: '🏆',
+          key: 'exportReady'
+        }
+      ]; track item.key) {
+        <div class="feature-card">
+          <div class="feature-icon">{{ item.icon }}</div>
+          <h3 class="feature-title">{{ t('whyEgypt.' + item.key + '.title') }}</h3>
+          <p class="feature-desc">{{ t('whyEgypt.' + item.key + '.desc') }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

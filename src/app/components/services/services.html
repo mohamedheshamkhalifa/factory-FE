@@ -1,0 +1,21 @@
+<!-- Services Section -->
+<section id="services" class="services-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        {{ t('services.title') }}
+      </h2>
+      <p class="section-subtitle">{{ t('services.subtitle') }}</p>
+    </div>
+
+    <div class="services-grid">
+      @for (service of t('services.items'); track service.title) {
+        <div class="service-card">
+          <div class="service-icon">👕</div>
+          <h3 class="service-title">{{ service.title }}</h3>
+          <p class="service-desc">{{ service.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

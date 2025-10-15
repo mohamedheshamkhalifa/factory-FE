@@ -1,0 +1,109 @@
+/* Global Styles */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #fafaf9;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1c1917;
+}
+
+/* Landing page wrapper */
+.landing-page {
+  min-height: 100vh;
+  background-color: #fafaf9;
+}
+
+/* Container - used across all sections */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Section Headers - used across multiple components */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1c1917;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #57534e;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* RTL Support - Global right-to-left styles */
+[dir="rtl"] {
+  .logo-section {
+    flex-direction: row-reverse;
+  }
+
+  .nav-links {
+    flex-direction: row-reverse;
+  }
+
+  .language-menu {
+    right: auto;
+    left: 0;
+  }
+
+  .brand-name,
+  .brand-location {
+    text-align: right;
+  }
+
+  .hero-title,
+  .section-title,
+  .section-subtitle {
+    text-align: right;
+  }
+
+  .capability-item,
+  .contact-info-item {
+    flex-direction: row-reverse;
+  }
+
+  .list-icon {
+    margin-right: 0;
+    margin-left: 0.75rem;
+  }
+
+  .contact-icon {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+
+  .arrow {
+    margin-left: 0;
+    margin-right: 0.5rem;
+    transform: scaleX(-1);
+  }
+
+  .footer-logo {
+    flex-direction: row-reverse;
+  }
+}

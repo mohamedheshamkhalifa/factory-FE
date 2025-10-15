@@ -1,0 +1,46 @@
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <img src="assets/SAKTILE Garments Branding Logo.PNG" alt="SAKTILE Logo" class="footer-logo-image" />
+          <span class="footer-brand">{{ t('brand.name') }}</span>
+        </div>
+        <p class="footer-description">{{ t('footer.description') }}</p>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">{{ t('footer.quickLinks') }}</h4>
+        <ul class="footer-links">
+          <li><a href="#home" class="footer-link">{{ t('nav.home') }}</a></li>
+          <li><a href="#capabilities" class="footer-link">{{ t('nav.capabilities') }}</a></li>
+          <li><a href="#services" class="footer-link">{{ t('nav.services') }}</a></li>
+          <li><a href="#contact" class="footer-link">{{ t('nav.contact') }}</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">{{ t('footer.services') }}</h4>
+        <ul class="footer-list">
+          @for (service of t('footer.servicesItems'); track service) {
+            <li>{{ service }}</li>
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-heading">{{ t('footer.certifications') }}</h4>
+        <ul class="footer-list">
+          @for (cert of t('footer.certificationsItems'); track cert) {
+            <li>{{ cert }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>{{ t('footer.copyright') }}</p>
+    </div>
+  </div>
+</footer>

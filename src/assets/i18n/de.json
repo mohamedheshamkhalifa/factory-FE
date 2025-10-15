@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "capabilities": "Fähigkeiten",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "requestQuote": "Angebot anfordern"
+  },
+  "hero": {
+    "badge": "PREMIUM BEKLEIDUNGSHERSTELLUNG",
+    "title": "Ägyptische Handwerkskunst trifft auf globale Standards",
+    "description": "Weltklasse-Bekleidungsherstellung aus Alexandria, Ägypten. Wettbewerbsfähige Preise, außergewöhnliche Qualität und strategische Logistik für internationale Marken.",
+    "getQuote": "Angebot erhalten",
+    "ourCapabilities": "Unsere Fähigkeiten"
+  },
+  "stats": {
+    "yearsExperience": "Jahre Erfahrung",
+    "skilledWorkers": "Qualifizierte Arbeiter",
+    "unitsPerMonth": "Einheiten/Monat",
+    "onTimeDelivery": "Pünktliche Lieferung"
+  },
+  "whyEgypt": {
+    "title": "Warum ägyptische Fertigung?",
+    "subtitle": "Strategische Vorteile, die Alexandria zu Ihrem idealen Fertigungspartner machen",
+    "strategicLocation": {
+      "title": "Strategische Lage",
+      "desc": "Der Hafen von Alexandria bietet einfachen Zugang zu Europa, dem Nahen Osten und Afrika. Präferenzielle Handelsabkommen mit EU- und USA-Märkten."
+    },
+    "costCompetitive": {
+      "title": "Kosteneffizient",
+      "desc": "30-40% Kosteneinsparungen im Vergleich zur westlichen Fertigung ohne Kompromisse bei der Qualität. Maximieren Sie Ihre Margen bei gleichbleibenden Standards."
+    },
+    "exportReady": {
+      "title": "Exportbereit",
+      "desc": "ISO 9001:2015 zertifiziert. Vollständige Einhaltung internationaler Standards und Erfahrung in der globalen Versandlogistik."
+    }
+  },
+  "capabilities": {
+    "title": "Unsere Fähigkeiten",
+    "subtitle": "Fortschrittliche Infrastruktur für Premium-Bekleidungsproduktion",
+    "manufacturing": {
+      "title": "Fertigungsanlagen",
+      "items": [
+        "300+ industrielle Nähmaschinen",
+        "Fortschrittliche Schneid- und Schnittmustertechnologie",
+        "Interne Stickerei- und Druckdienste",
+        "Qualitätskontrolllabor",
+        "Moderne Stofflager- und Handhabungssysteme"
+      ]
+    },
+    "production": {
+      "title": "Produktionsprozess",
+      "items": [
+        "Musterentwicklung und Prototyping",
+        "Unterstützung bei Stoffbeschaffung und -einkauf",
+        "Massenproduktion mit Qualitätskontrollpunkten",
+        "Veredelungs- und Verpackungsdienste",
+        "Globale Versand- und Logistikkoordination"
+      ]
+    },
+    "badges": {
+      "flexibleMOQs": {
+        "title": "Flexible Mindestbestellmengen",
+        "desc": "Von kleinen Chargen bis zu großen Bestellungen"
+      },
+      "skilledTeam": {
+        "title": "Qualifiziertes Team",
+        "desc": "500+ erfahrene Mitarbeiter"
+      },
+      "isoCertified": {
+        "title": "ISO-zertifiziert",
+        "desc": "Qualitätsmanagementsystem"
+      }
+    }
+  },
+  "services": {
+    "title": "Was wir herstellen",
+    "subtitle": "Umfassende Bekleidungsherstellung für internationale Marken",
+    "items": [
+      {
+        "title": "T-Shirts & Tops",
+        "desc": "Individuell bedruckte und einfarbige T-Shirts, Poloshirts, Tanktops"
+      },
+      {
+        "title": "Sportbekleidung",
+        "desc": "Leistungssportbekleidung, Yogahosen, Fitnessbekleidung"
+      },
+      {
+        "title": "Kleider & Röcke",
+        "desc": "Modekleider, Freizeitröcke, formelle Kleidung"
+      },
+      {
+        "title": "Oberbekleidung",
+        "desc": "Jacken, Hoodies, Sweatshirts, Mäntel"
+      },
+      {
+        "title": "Strickwaren",
+        "desc": "Pullover, Strickjacken, gestrickte Accessoires"
+      },
+      {
+        "title": "Uniformen",
+        "desc": "Firmenuniformen, Schuluniformen, Arbeitskleidung"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Bereit, Ihr nächstes Projekt zu starten?",
+    "description": "Arbeiten Sie mit SAKTILE für Premium-Fertigung, wettbewerbsfähige Preise und zuverlässige Lieferung von Ägypten in die Welt.",
+    "button": "Heute Angebot anfordern"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Lassen Sie uns über Ihre Fertigungsanforderungen sprechen",
+    "info": {
+      "title": "Kontaktinformationen",
+      "location": {
+        "label": "Fabrikstandort",
+        "value": "Alexandria Industrial Zone\nAlexandria, Ägypten"
+      },
+      "phone": {
+        "label": "Telefon",
+        "value": "+20 (XXX) XXX-XXXX"
+      },
+      "email": {
+        "label": "E-Mail",
+        "value": "info@saktile.com"
+      }
+    },
+    "businessHours": {
+      "title": "Geschäftszeiten",
+      "text": "Sonntag - Donnerstag: 8:00 - 17:00 Uhr (OEZ)\nFreitag - Samstag: Geschlossen"
+    },
+    "form": {
+      "title": "Angebot anfordern",
+      "companyName": "Firmenname",
+      "contactPerson": "Ansprechpartner",
+      "email": "E-Mail-Adresse",
+      "projectDetails": "Projektdetails",
+      "projectDetailsPlaceholder": "Erzählen Sie uns von Ihren Bekleidungsfertigungsanforderungen, Mengen, Zeitplan...",
+      "submit": "Anfrage senden"
+    }
+  },
+  "footer": {
+    "description": "Premium-Bekleidungsherstellung von Alexandria, Ägypten, in die Welt.",
+    "quickLinks": "Schnelllinks",
+    "services": "Dienstleistungen",
+    "certifications": "Zertifizierungen",
+    "copyright": "© 2025 SAKTILE. Alle Rechte vorbehalten. | Alexandria, Ägypten",
+    "servicesItems": [
+      "T-Shirts & Tops",
+      "Sportbekleidung",
+      "Oberbekleidung",
+      "Uniformen"
+    ],
+    "certificationsItems": [
+      "ISO 9001:2015",
+      "WRAP-zertifiziert",
+      "OEKO-TEX-Standard"
+    ]
+  },
+  "brand": {
+    "name": "SAKTILE",
+    "location": "Alexandria, Ägypten"
+  }
+}

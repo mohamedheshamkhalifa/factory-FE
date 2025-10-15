@@ -1,0 +1,48 @@
+<!-- Hero Section -->
+<section id="home" class="hero-section">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge">
+          {{ t('hero.badge') }}
+        </div>
+        <h1 class="hero-title">
+          {{ t('hero.title') }}
+        </h1>
+        <p class="hero-description">
+          {{ t('hero.description') }}
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">
+            {{ t('hero.getQuote') }} <span class="arrow">›</span>
+          </a>
+          <a href="#capabilities" class="btn-secondary">
+            {{ t('hero.ourCapabilities') }}
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <div class="hero-image">
+          <svg class="factory-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M2 20h20M2 20v-6M2 14V4M22 20v-6M22 14V4M8 4v10M14 4v10M8 7h6M8 11h6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      @for (stat of [
+        { num: '15+', label: 'yearsExperience' },
+        { num: '500+', label: 'skilledWorkers' },
+        { num: '50K+', label: 'unitsPerMonth' },
+        { num: '98%', label: 'onTimeDelivery' }
+      ]; track stat.label) {
+        <div class="stat-item">
+          <div class="stat-number">{{ stat.num }}</div>
+          <div class="stat-label">{{ t('stats.' + stat.label) }}</div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

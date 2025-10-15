@@ -1,0 +1,165 @@
+{
+  "nav": {
+    "home": "Home",
+    "capabilities": "Capabilities",
+    "services": "Services",
+    "contact": "Contact",
+    "requestQuote": "Request Quote"
+  },
+  "hero": {
+    "badge": "PREMIUM GARMENT MANUFACTURING",
+    "title": "Egyptian Craftsmanship Meets Global Standards",
+    "description": "World-class garment manufacturing from Alexandria, Egypt. Competitive pricing, exceptional quality, and strategic logistics for international brands.",
+    "getQuote": "Get a Quote",
+    "ourCapabilities": "Our Capabilities"
+  },
+  "stats": {
+    "yearsExperience": "Years Experience",
+    "skilledWorkers": "Skilled Workers",
+    "unitsPerMonth": "Units/Month",
+    "onTimeDelivery": "On-Time Delivery"
+  },
+  "whyEgypt": {
+    "title": "Why Egyptian Manufacturing?",
+    "subtitle": "Strategic advantages that make Alexandria your ideal manufacturing partner",
+    "strategicLocation": {
+      "title": "Strategic Location",
+      "desc": "Alexandria port provides easy access to Europe, Middle East & Africa. Preferential trade agreements with EU and USA markets."
+    },
+    "costCompetitive": {
+      "title": "Cost Competitive",
+      "desc": "30-40% cost savings versus Western manufacturing without compromising quality. Maximize your margins while maintaining standards."
+    },
+    "exportReady": {
+      "title": "Export Ready",
+      "desc": "ISO 9001:2015 certified. Full compliance with international standards and experienced in global shipping logistics."
+    }
+  },
+  "capabilities": {
+    "title": "Our Capabilities",
+    "subtitle": "Advanced infrastructure for premium garment production",
+    "manufacturing": {
+      "title": "Manufacturing Facilities",
+      "items": [
+        "300+ industrial sewing machines",
+        "Advanced cutting and pattern-making technology",
+        "In-house embroidery and printing services",
+        "Quality control laboratory",
+        "Modern fabric storage and handling systems"
+      ]
+    },
+    "production": {
+      "title": "Production Process",
+      "items": [
+        "Sample development and prototyping",
+        "Fabric sourcing and procurement assistance",
+        "Bulk production with quality checkpoints",
+        "Finishing and packaging services",
+        "Global shipping and logistics coordination"
+      ]
+    },
+    "badges": {
+      "flexibleMOQs": {
+        "title": "Flexible MOQs",
+        "desc": "From small batches to large orders"
+      },
+      "skilledTeam": {
+        "title": "Skilled Team",
+        "desc": "500+ experienced workers"
+      },
+      "isoCertified": {
+        "title": "ISO Certified",
+        "desc": "Quality management system"
+      }
+    }
+  },
+  "services": {
+    "title": "What We Manufacture",
+    "subtitle": "Comprehensive garment manufacturing for international brands",
+    "items": [
+      {
+        "title": "T-Shirts & Tops",
+        "desc": "Custom printed and plain t-shirts, polo shirts, tank tops"
+      },
+      {
+        "title": "Activewear",
+        "desc": "Performance sportswear, yoga pants, gym wear"
+      },
+      {
+        "title": "Dresses & Skirts",
+        "desc": "Fashion dresses, casual skirts, formal wear"
+      },
+      {
+        "title": "Outerwear",
+        "desc": "Jackets, hoodies, sweatshirts, coats"
+      },
+      {
+        "title": "Knitwear",
+        "desc": "Sweaters, cardigans, knitted accessories"
+      },
+      {
+        "title": "Uniforms",
+        "desc": "Corporate uniforms, school uniforms, workwear"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Start Your Next Project?",
+    "description": "Partner with SAKTILE for premium manufacturing, competitive pricing, and reliable delivery from Egypt to the world.",
+    "button": "Request a Quote Today"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's discuss your manufacturing needs",
+    "info": {
+      "title": "Contact Information",
+      "location": {
+        "label": "Factory Location",
+        "value": "Alexandria Industrial Zone\nAlexandria, Egypt"
+      },
+      "phone": {
+        "label": "Phone",
+        "value": "+20 (XXX) XXX-XXXX"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@saktile.com"
+      }
+    },
+    "businessHours": {
+      "title": "Business Hours",
+      "text": "Sunday - Thursday: 8:00 AM - 5:00 PM (EET)\nFriday - Saturday: Closed"
+    },
+    "form": {
+      "title": "Request a Quote",
+      "companyName": "Company Name",
+      "contactPerson": "Contact Person",
+      "email": "Email Address",
+      "projectDetails": "Project Details",
+      "projectDetailsPlaceholder": "Tell us about your garment manufacturing needs, quantities, timeline...",
+      "submit": "Send Inquiry"
+    }
+  },
+  "footer": {
+    "description": "Premium garment manufacturing from Alexandria, Egypt to the world.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "certifications": "Certifications",
+    "copyright": "© 2025 SAKTILE. All rights reserved. | Alexandria, Egypt",
+    "servicesItems": [
+      "T-Shirts & Tops",
+      "Activewear",
+      "Outerwear",
+      "Uniforms"
+    ],
+    "certificationsItems": [
+      "ISO 9001:2015",
+      "WRAP Certified",
+      "OEKO-TEX Standard"
+    ]
+  },
+  "brand": {
+    "name": "SAKTILE",
+    "location": "Alexandria, Egypt"
+  }
+}

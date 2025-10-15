@@ -1,0 +1,96 @@
+<nav class="navbar" [class.scrolled]="scrolled()">
+  <div class="nav-container">
+    <div class="nav-content">
+      <div class="logo-section">
+        <!-- Logo -->
+        <img src="assets/SAKTILE Garments Branding Logo.PNG" alt="SAKTILE Logo" class="logo-image" />
+        <div>
+          <div class="brand-name">{{ t('brand.name') }}</div>
+          <div class="brand-location">{{ t('brand.location') }}</div>
+        </div>
+      </div>
+
+      <div class="nav-links">
+        @for (item of ['home', 'capabilities', 'services', 'contact']; track item) {
+          <a
+            [href]="'#' + item.toLowerCase()"
+            class="nav-link"
+          >
+            {{ t('nav.' + item) }}
+          </a>
+        }
+        <a
+          href="#contact"
+          class="quote-btn"
+        >
+          {{ t('nav.requestQuote') }}
+        </a>
+
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+          <button class="language-btn" (click)="toggleLanguageMenu()">
+            <span class="language-icon">🌐</span>
+            <span class="language-code">{{ translate.currentLanguage() | uppercase }}</span>
+          </button>
+
+          @if (languageMenuOpen()) {
+            <div class="language-menu">
+              @for (lang of translate.getAvailableLanguages(); track lang.code) {
+                <button
+                  class="language-option"
+                  [class.active]="translate.currentLanguage() === lang.code"
+                  (click)="changeLanguage(lang.code)"
+                >
+                  <span class="flag">{{ lang.flag }}</span>
+                  <span>{{ lang.name }}</span>
+                </button>
+              }
+            </div>
+          }
+        </div>
+      </div>
+
+      <button
+        class="mobile-menu-btn"
+        (click)="toggleMobileMenu()"
+      >
+        @if (mobileMenuOpen()) {
+          <span class="icon">✕</span>
+        } @else {
+          <span class="icon">☰</span>
+        }
+      </button>
+    </div>
+  </div>
+
+  @if (mobileMenuOpen()) {
+    <div class="mobile-menu">
+      <div class="mobile-menu-content">
+        @for (item of ['home', 'capabilities', 'services', 'contact']; track item) {
+          <a
+            [href]="'#' + item.toLowerCase()"
+            class="mobile-link"
+            (click)="closeMobileMenu()"
+          >
+            {{ t('nav.' + item) }}
+          </a>
+        }
+
+        <!-- Mobile Language Switcher -->
+        <div class="mobile-language-section">
+          <div class="mobile-language-title">Language</div>
+          @for (lang of translate.getAvailableLanguages(); track lang.code) {
+            <button
+              class="mobile-language-option"
+              [class.active]="translate.currentLanguage() === lang.code"
+              (click)="changeLanguage(lang.code); closeMobileMenu()"
+            >
+              <span class="flag">{{ lang.flag }}</span>
+              <span>{{ lang.name }}</span>
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+  }
+</nav>

@@ -1,0 +1,160 @@
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        {{ t('contact.title') }}
+      </h2>
+      <p class="section-subtitle">{{ t('contact.subtitle') }}</p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <h3 class="contact-info-title">{{ t('contact.info.title') }}</h3>
+
+        <div class="contact-info-list">
+          <div class="contact-info-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <div class="contact-label">{{ t('contact.info.location.label') }}</div>
+              <div class="contact-value">{{ t('contact.info.location.value') }}</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <div class="contact-label">{{ t('contact.info.phone.label') }}</div>
+              <div class="contact-value">{{ t('contact.info.phone.value') }}</div>
+            </div>
+          </div>
+
+          <div class="contact-info-item">
+            <span class="contact-icon">✉️</span>
+            <div>
+              <div class="contact-label">{{ t('contact.info.email.label') }}</div>
+              <div class="contact-value">{{ t('contact.info.email.value') }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="business-hours">
+          <h4 class="business-hours-title">{{ t('contact.businessHours.title') }}</h4>
+          <p class="business-hours-text">{{ t('contact.businessHours.text') }}</p>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3 class="form-title">{{ t('contact.form.title') }}</h3>
+
+        <!-- Success Message -->
+        @if (submitSuccess()) {
+          <div class="alert alert-success">
+            <strong>Success!</strong> Your message has been sent successfully. We'll get back to you soon!
+          </div>
+        }
+
+        <!-- Error Message -->
+        @if (submitError()) {
+          <div class="alert alert-error">
+            <strong>Error!</strong> There was a problem sending your message. Please try again or email us directly.
+          </div>
+        }
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
+          <div class="form-group">
+            <label class="form-label">{{ t('contact.form.companyName') }} *</label>
+            <input
+              type="text"
+              class="form-input"
+              formControlName="companyName"
+              [placeholder]="t('contact.form.companyName')"
+              [class.invalid]="f['companyName'].invalid && f['companyName'].touched"
+            />
+            @if (f['companyName'].invalid && f['companyName'].touched) {
+              <div class="error-message">
+                @if (f['companyName'].errors?.['required']) {
+                  <span>Company name is required</span>
+                }
+                @if (f['companyName'].errors?.['minlength']) {
+                  <span>Company name must be at least 2 characters</span>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">{{ t('contact.form.contactPerson') }} *</label>
+            <input
+              type="text"
+              class="form-input"
+              formControlName="contactPerson"
+              [placeholder]="t('contact.form.contactPerson')"
+              [class.invalid]="f['contactPerson'].invalid && f['contactPerson'].touched"
+            />
+            @if (f['contactPerson'].invalid && f['contactPerson'].touched) {
+              <div class="error-message">
+                @if (f['contactPerson'].errors?.['required']) {
+                  <span>Contact person name is required</span>
+                }
+                @if (f['contactPerson'].errors?.['minlength']) {
+                  <span>Name must be at least 2 characters</span>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">{{ t('contact.form.email') }} *</label>
+            <input
+              type="email"
+              class="form-input"
+              formControlName="email"
+              [placeholder]="t('contact.form.email')"
+              [class.invalid]="f['email'].invalid && f['email'].touched"
+            />
+            @if (f['email'].invalid && f['email'].touched) {
+              <div class="error-message">
+                @if (f['email'].errors?.['required']) {
+                  <span>Email is required</span>
+                }
+                @if (f['email'].errors?.['email']) {
+                  <span>Please enter a valid email address</span>
+                }
+              </div>
+            }
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">{{ t('contact.form.projectDetails') }} *</label>
+            <textarea
+              rows="4"
+              class="form-textarea"
+              formControlName="projectDetails"
+              [placeholder]="t('contact.form.projectDetailsPlaceholder')"
+              [class.invalid]="f['projectDetails'].invalid && f['projectDetails'].touched"
+            ></textarea>
+            @if (f['projectDetails'].invalid && f['projectDetails'].touched) {
+              <div class="error-message">
+                @if (f['projectDetails'].errors?.['required']) {
+                  <span>Project details are required</span>
+                }
+                @if (f['projectDetails'].errors?.['minlength']) {
+                  <span>Please provide at least 10 characters</span>
+                }
+              </div>
+            }
+          </div>
+
+          <button type="submit" class="form-submit" [disabled]="submitting()">
+            @if (submitting()) {
+              <span>Sending...</span>
+            } @else {
+              <span>{{ t('contact.form.submit') }}</span>
+            }
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

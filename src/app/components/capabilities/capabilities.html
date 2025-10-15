@@ -1,0 +1,52 @@
+<!-- Capabilities Section -->
+<section id="capabilities" class="capabilities-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        {{ t('capabilities.title') }}
+      </h2>
+      <p class="section-subtitle">{{ t('capabilities.subtitle') }}</p>
+    </div>
+
+    <div class="capabilities-grid">
+      <div class="capability-card">
+        <h3 class="capability-title">{{ t('capabilities.manufacturing.title') }}</h3>
+        <ul class="capability-list">
+          @for (item of t('capabilities.manufacturing.items'); track item) {
+            <li class="capability-item">
+              <span class="list-icon">›</span>
+              <span>{{ item }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="capability-card">
+        <h3 class="capability-title">{{ t('capabilities.production.title') }}</h3>
+        <ul class="capability-list">
+          @for (item of t('capabilities.production.items'); track item) {
+            <li class="capability-item">
+              <span class="list-icon">›</span>
+              <span>{{ item }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+
+    <!-- Additional capabilities -->
+    <div class="badges-grid">
+      @for (item of [
+        { icon: '📦', key: 'flexibleMOQs' },
+        { icon: '👥', key: 'skilledTeam' },
+        { icon: '🏆', key: 'isoCertified' }
+      ]; track item.key) {
+        <div class="badge-card">
+          <div class="badge-icon">{{ item.icon }}</div>
+          <h4 class="badge-title">{{ t('capabilities.badges.' + item.key + '.title') }}</h4>
+          <p class="badge-desc">{{ t('capabilities.badges.' + item.key + '.desc') }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

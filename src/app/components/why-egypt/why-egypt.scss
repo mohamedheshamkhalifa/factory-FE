@@ -1,0 +1,42 @@
+/* Why Egypt Section */
+.why-egypt-section {
+  padding: 5rem 0;
+  background-color: #ffffff;
+}
+
+.features-grid {
+  display: grid;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-card {
+  background-color: #fafaf9;
+  padding: 2rem;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1c1917;
+  margin-bottom: 0.75rem;
+  font-family: Georgia, serif;
+}
+
+.feature-desc {
+  color: #57534e;
+  line-height: 1.75;
+}
