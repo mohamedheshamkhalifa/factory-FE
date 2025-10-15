@@ -1,0 +1,22 @@
+---
+deployment:
+  tasks:
+    # 1) Target path for deployment
+    - export DEPLOYPATH=/home/apextext/public_html/
+
+    # 2) Ensure directory exists
+    - /bin/mkdir -p "$DEPLOYPATH"
+
+    # 3) Install dependencies
+    - /usr/bin/npm ci
+
+    # 4) Build Angular app
+    - /usr/bin/npm run build
+
+    # 5) Detect Angular dist output (adjust if your angular.json uses a different name)
+    - if [ -d dist/Portal/browser ]; then export DIST=dist/Portal/browser; \
+      elif [ -d dist/Portal ]; then export DIST=dist/Portal; \
+      else export DIST=dist; fi
+
+    # 6) Deploy built files to web root
+    - /usr/bin/rsync -a --delete "$DIST"/ "$DEPLOYPATH"
