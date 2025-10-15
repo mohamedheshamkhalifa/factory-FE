@@ -14,7 +14,9 @@ deployment:
     - /usr/bin/npm run build
 
     # 5) Detect Angular dist output (adjust if your angular.json uses a different name)
-    - if [ -d dist/Portal/browser ]; then export DIST=dist/Portal/browser; \
+    - if [ -d dist/portal/browser ]; then export DIST=dist/portal/browser; \
+      elif [ -d dist/portal ]; then export DIST=dist/portal; \
+      elif [ -d dist/Portal/browser ]; then export DIST=dist/Portal/browser; \
       elif [ -d dist/Portal ]; then export DIST=dist/Portal; \
       else export DIST=dist; fi
 
