@@ -1,5 +1,8 @@
 const nodemailer = require('nodemailer');
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+
+// Type imports are handled at compile time
+type VercelRequest = import('@vercel/node').VercelRequest;
+type VercelResponse<T = any> = import('@vercel/node').VercelResponse<T>;
 
 // Interfaces
 interface ContactFormData {
@@ -78,7 +81,7 @@ function validateFormData(data: any): { valid: boolean; error?: string; formData
   return { valid: true, formData: trimmedData };
 }
 
-export default async function handler(
+async function handler(
   req: VercelRequest,
   res: VercelResponse<SuccessResponse | ErrorResponse>
 ) {
