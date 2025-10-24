@@ -123,20 +123,28 @@ async function handler(
     }
 
     console.log('Environment variables verified. SMTP_HOST:', SMTP_HOST);
+    console.log('SMTP_PORT:', SMTP_PORT);
+    console.log('SMTP_USER:', SMTP_USER);
 
     // Configure nodemailer transport with SSL/TLS
+    // Namecheap PrivateEmail supports both port 465 (SSL) and 587 (TLS)
+    const smtpPort = Number(SMTP_PORT);
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
-      port: Number(SMTP_PORT), // 465 for SSL
-      secure: true, // Use SSL/TLS
+      port: smtpPort,
+      secure: smtpPort === 465, // true for 465, false for other ports (587 uses STARTTLS)
       auth: {
         user: SMTP_USER,
         pass: SMTP_PASS
       },
       // Additional options for better compatibility with Namecheap PrivateEmail
       tls: {
-        rejectUnauthorized: true
-      }
+        rejectUnauthorized: false, // Some Namecheap servers need this
+        ciphers: 'SSLv3'
+      },
+      // Debug logging
+      logger: true,
+      debug: false
     });
 
     console.log('Transporter created. Verifying connection...');
