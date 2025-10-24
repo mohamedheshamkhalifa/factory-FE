@@ -40,8 +40,8 @@ export class App implements OnInit {
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: 'Kemet Garment — Egyptian Craftsmanship Meets Global Standards' },
       { property: 'og:description', content: 'World-class garment manufacturing from Egypt for international brands.' },
-      { property: 'og:image', content: 'https://factory-fe.vercel.app/assets/layerImage.png' },
-      { property: 'og:url', content: 'https://factory-fe.vercel.app/' },
+      { property: 'og:image', content: 'https://www.kemetgarment.com/assets/layerImage.png' },
+      { property: 'og:url', content: 'https://www.kemetgarment.com/' },
       { name: 'twitter:card', content: 'summary_large_image' }
     ]);
 
@@ -50,8 +50,8 @@ export class App implements OnInit {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Kemet Garment",
-      "url": "https://factory-fe.vercel.app/",
-      "logo": "https://factory-fe.vercel.app/assets/logo.png",
+      "url": "https://www.kemetgarment.com/",
+      "logo": "https://www.kemetgarment.com/assets/logo.png",
       "description": "Premium garment manufacturer based in Alexandria Egypt.",
       "address": {
         "@type": "PostalAddress",
