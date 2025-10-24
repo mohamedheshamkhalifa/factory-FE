@@ -1,5 +1,5 @@
+const nodemailer = require('nodemailer');
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import nodemailer from 'nodemailer';
 
 // Interfaces
 interface ContactFormData {
@@ -82,37 +82,45 @@ export default async function handler(
   req: VercelRequest,
   res: VercelResponse<SuccessResponse | ErrorResponse>
 ) {
-  // Set security headers
-  res.setHeader('Cache-Control', 'no-store');
-  res.setHeader('Content-Type', 'application/json');
-
-  // Only allow POST method
-  if (req.method !== 'POST') {
-    return res.status(405).json({ ok: false, error: 'Method not allowed' });
-  }
-
-  // Body size limit check (approximate, Vercel has default limits but we add our own)
-  const bodySize = JSON.stringify(req.body).length;
-  if (bodySize > 25 * 1024) { // ~25kb
-    return res.status(413).json({ ok: false, error: 'Request body too large' });
-  }
-
-  // Validate form data
-  const validation = validateFormData(req.body);
-  if (!validation.valid || !validation.formData) {
-    return res.status(400).json({ ok: false, error: validation.error || 'Invalid data' });
-  }
-
-  const formData = validation.formData;
-
-  // Check environment variables
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, TO_EMAIL } = process.env;
-  if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !TO_EMAIL) {
-    console.error('Missing required environment variables');
-    return res.status(500).json({ ok: false, error: 'Server configuration error' });
-  }
-
   try {
+    // Set security headers
+    res.setHeader('Cache-Control', 'no-store');
+    res.setHeader('Content-Type', 'application/json');
+
+    console.log('API called - Method:', req.method);
+
+    // Only allow POST method
+    if (req.method !== 'POST') {
+      return res.status(405).json({ ok: false, error: 'Method not allowed' });
+    }
+
+    // Body size limit check (approximate, Vercel has default limits but we add our own)
+    const bodySize = JSON.stringify(req.body).length;
+    if (bodySize > 25 * 1024) { // ~25kb
+      return res.status(413).json({ ok: false, error: 'Request body too large' });
+    }
+
+    console.log('Validating form data...');
+
+    // Validate form data
+    const validation = validateFormData(req.body);
+    if (!validation.valid || !validation.formData) {
+      console.log('Validation failed:', validation.error);
+      return res.status(400).json({ ok: false, error: validation.error || 'Invalid data' });
+    }
+
+    const formData = validation.formData;
+    console.log('Form data validated for:', formData.companyName);
+
+    // Check environment variables
+    const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, TO_EMAIL } = process.env;
+    if (!SMTP_HOST || !SMTP_PORT || !SMTP_USER || !SMTP_PASS || !TO_EMAIL) {
+      console.error('Missing environment variables');
+      return res.status(500).json({ ok: false, error: 'Server configuration error' });
+    }
+
+    console.log('Environment variables verified. SMTP_HOST:', SMTP_HOST);
+
     // Configure nodemailer transport with SSL/TLS
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
@@ -128,8 +136,11 @@ export default async function handler(
       }
     });
 
+    console.log('Transporter created. Verifying connection...');
+
     // Verify connection configuration (optional but recommended)
     await transporter.verify();
+    console.log('SMTP connection verified successfully');
 
     // Email to team (info@kemetgarment.com)
     const teamEmailSubject = `New Inquiry — ${formData.companyName}`;
@@ -204,7 +215,7 @@ Thank you for contacting Kemet Garment. We received your inquiry and will get ba
 
 Best regards,
 Mohamed Ezzat
-CEO | Kemet Garment
+Managing Partner | Kemet Garment
 +20 111 771 1147
 www.kemetgarment.com
     `.trim();
@@ -239,7 +250,7 @@ www.kemetgarment.com
       </div>
       <div class="signature">
         <div class="signature-name">Best regards,<br>Mohamed Ezzat</div>
-        <div class="signature-title">CEO | Kemet Garment</div>
+        <div class="signature-title">Managing Partner | Kemet Garment</div>
         <div class="signature-contact">
           +20 111 771 1147<br>
           <a href="https://www.kemetgarment.com" style="color: #3498db; text-decoration: none;">www.kemetgarment.com</a>
@@ -258,6 +269,8 @@ www.kemetgarment.com
     // NOTE: You could add rate-limiting here using Upstash Redis or similar
     // Example: await checkRateLimit(formData.email);
 
+    console.log('Sending email to team...');
+
     // Email to team
     await transporter.sendMail({
       from: `"Kemet Garment" <${SMTP_USER}>`,
@@ -267,6 +280,10 @@ www.kemetgarment.com
       text: teamEmailText,
       html: teamEmailHtml
     });
+
+    console.log('Team email sent successfully');
+
+    console.log('Sending auto-reply to customer...');
 
     // Auto-reply to customer
     await transporter.sendMail({
@@ -278,11 +295,15 @@ www.kemetgarment.com
       html: customerEmailHtml
     });
 
+    console.log('Customer auto-reply sent successfully');
+
     // Success response
     return res.status(200).json({ ok: true });
 
-  } catch (error) {
-    console.error('Error sending email:', error);
+  } catch (error: any) {
+    console.error('Error in contact API:', error);
+    console.error('Error message:', error?.message);
+    console.error('Error stack:', error?.stack);
 
     // Return generic error to client (don't expose internal details)
     return res.status(500).json({
@@ -291,3 +312,5 @@ www.kemetgarment.com
     });
   }
 }
+
+module.exports = handler;
