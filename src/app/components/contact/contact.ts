@@ -57,7 +57,7 @@ export class Contact {
     // You can replace this with EmailJS, SendGrid, or your own backend
 
     const emailData = {
-      to: 'mohamedheshamkhalifa@gmail.com',
+      to: 'info@kemetgarment.com',
       subject: `New Contact Form Submission from ${formData.companyName}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -69,9 +69,8 @@ export class Contact {
       `
     };
 
-    // Using EmailJS (you'll need to set up an EmailJS account)
-    // For now, I'll implement a fetch to FormSubmit (a free form backend)
-    const formSubmitUrl = 'https://formsubmit.co/ajax/mohamedheshamkhalifa@gmail.com';
+    // Using FormSubmit.co with auto-reply enabled
+    const formSubmitUrl = 'https://formsubmit.co/ajax/info@kemetgarment.com';
 
     fetch(formSubmitUrl, {
       method: 'POST',
@@ -85,7 +84,9 @@ export class Contact {
         'Contact Person': formData.contactPerson,
         'Email': formData.email,
         'Project Details': formData.projectDetails,
-        _captcha: 'false' // Disable captcha for easier testing
+        _captcha: 'false', // Disable captcha for easier testing
+        _autoresponse: 'Thank you for contacting Kemet Garment! We have received your inquiry and will get back to you as soon as possible. Our team typically responds within 24-48 hours during business days.',
+        _replyto: formData.email // Send auto-reply to the user's email
       })
     })
     .then(response => response.json())
