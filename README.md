@@ -1,6 +1,6 @@
-# SAKTILE Garments - Factory Portal
+# kemet garment - Factory Portal
 
-A modern, multilingual landing page for SAKTILE Garments manufacturing company based in Alexandria, Egypt. Built with Angular 20, featuring full internationalization (i18n) support for English, Arabic, German, and Turkish.
+A modern, multilingual landing page for kemet garment manufacturing company based in Alexandria, Egypt. Built with Angular 20, featuring full internationalization (i18n) support for English, Arabic, German, and Turkish.
 
 ## 🌟 Features
 
@@ -44,7 +44,7 @@ portal/
 │   │   │   ├── ar.json          # Arabic translations
 │   │   │   ├── de.json          # German translations
 │   │   │   └── tr.json          # Turkish translations
-│   │   └── SAKTILE Garments Branding Logo.PNG
+│   │   └── kemet garment Branding Logo.PNG
 │   └── index.html
 ├── angular.json                  # Angular configuration
 ├── package.json                  # Dependencies
@@ -330,7 +330,7 @@ Update contact details in translation files:
   "contact": {
     "info": {
       "phone": { "value": "+20 (XXX) XXX-XXXX" },
-      "email": { "value": "info@saktile.com" }
+      "email": { "value": "info@kemetgarment.com" }
     }
   }
 }
@@ -370,12 +370,12 @@ Update contact details in translation files:
 
 ## 📄 License
 
-All rights reserved © 2025 SAKTILE
+All rights reserved © 2025 Kemet Garment
 
 ## 📧 Contact
 
 For questions or support:
-- **Email**: info@saktile.com
+- **Email**: info@kemetgarment.com
 - **Location**: Alexandria, Egypt
 
 ---

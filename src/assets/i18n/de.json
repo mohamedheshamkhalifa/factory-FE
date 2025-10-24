@@ -105,7 +105,7 @@
   },
   "cta": {
     "title": "Bereit, Ihr nächstes Projekt zu starten?",
-    "description": "Arbeiten Sie mit SAKTILE für Premium-Fertigung, wettbewerbsfähige Preise und zuverlässige Lieferung von Ägypten in die Welt.",
+    "description": "Arbeiten Sie mit Kemet Garment für Premium-Fertigung, wettbewerbsfähige Preise und zuverlässige Lieferung von Ägypten in die Welt.",
     "button": "Heute Angebot anfordern"
   },
   "contact": {
@@ -123,7 +123,7 @@
       },
       "email": {
         "label": "E-Mail",
-        "value": "info@saktile.com"
+        "value": "info@kemetgarment.com"
       }
     },
     "businessHours": {
@@ -145,7 +145,7 @@
     "quickLinks": "Schnelllinks",
     "services": "Dienstleistungen",
     "certifications": "Zertifizierungen",
-    "copyright": "© 2025 SAKTILE. Alle Rechte vorbehalten. | Alexandria, Ägypten",
+    "copyright": "© 2025 Kemet Garment. Alle Rechte vorbehalten. | Alexandria, Ägypten",
     "servicesItems": [
       "T-Shirts & Tops",
       "Sportbekleidung",
@@ -159,7 +159,7 @@
     ]
   },
   "brand": {
-    "name": "SAKTILE",
+    "name": "Kemet Garment",
     "location": "Alexandria, Ägypten"
   }
 }

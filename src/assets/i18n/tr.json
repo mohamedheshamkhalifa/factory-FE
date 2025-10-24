@@ -105,7 +105,7 @@
   },
   "cta": {
     "title": "Bir Sonraki Projenizi Başlatmaya Hazır mısınız?",
-    "description": "Premium üretim, rekabetçi fiyatlandırma ve Mısır'dan dünyaya güvenilir teslimat için SAKTILE ile ortaklık yapın.",
+    "description": "Premium üretim, rekabetçi fiyatlandırma ve Mısır'dan dünyaya güvenilir teslimat için Kemet Garment ile ortaklık yapın.",
     "button": "Bugün Teklif İsteyin"
   },
   "contact": {
@@ -123,7 +123,7 @@
       },
       "email": {
         "label": "E-posta",
-        "value": "info@saktile.com"
+        "value": "info@kemetgarment.com"
       }
     },
     "businessHours": {
@@ -145,7 +145,7 @@
     "quickLinks": "Hızlı Bağlantılar",
     "services": "Hizmetler",
     "certifications": "Sertifikalar",
-    "copyright": "© 2025 SAKTILE. Tüm hakları saklıdır. | İskenderiye, Mısır",
+    "copyright": "© 2025 Kemet Garment. Tüm hakları saklıdır. | İskenderiye, Mısır",
     "servicesItems": [
       "Tişörtler ve Üstler",
       "Aktif Giyim",
@@ -159,7 +159,7 @@
     ]
   },
   "brand": {
-    "name": "SAKTILE",
+    "name": "Kemet Garment",
     "location": "İskenderiye, Mısır"
   }
 }

@@ -105,7 +105,7 @@
   },
   "cta": {
     "title": "هل أنت مستعد لبدء مشروعك القادم؟",
-    "description": "شارك مع SAKTILE للحصول على تصنيع متميز، أسعار تنافسية، وتسليم موثوق من مصر إلى العالم.",
+    "description": "شارك مع Kemet Garment للحصول على تصنيع متميز، أسعار تنافسية، وتسليم موثوق من مصر إلى العالم.",
     "button": "اطلب عرض أسعار اليوم"
   },
   "contact": {
@@ -123,7 +123,7 @@
       },
       "email": {
         "label": "البريد الإلكتروني",
-        "value": "info@saktile.com"
+        "value": "info@kemetgarment.com"
       }
     },
     "businessHours": {
@@ -145,7 +145,7 @@
     "quickLinks": "روابط سريعة",
     "services": "الخدمات",
     "certifications": "الشهادات",
-    "copyright": "© 2025 SAKTILE. جميع الحقوق محفوظة. | الإسكندرية، مصر",
+    "copyright": "© 2025 Kemet Garment. جميع الحقوق محفوظة. | الإسكندرية، مصر",
     "servicesItems": [
       "تيشيرتات وقمصان",
       "ملابس رياضية",
@@ -159,7 +159,7 @@
     ]
   },
   "brand": {
-    "name": "SAKTILE",
+    "name": "Kemet Garment",
     "location": "الإسكندرية، مصر"
   }
 }
