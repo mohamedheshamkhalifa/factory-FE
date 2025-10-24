@@ -25,7 +25,8 @@ export class Contact {
       companyName: ['', [Validators.required, Validators.minLength(2)]],
       contactPerson: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      projectDetails: ['', [Validators.required, Validators.minLength(10)]]
+      projectDetails: ['', [Validators.required, Validators.minLength(10)]],
+      honeypot: [''] // Spam trap - should remain empty
     });
   }
 
@@ -52,63 +53,49 @@ export class Contact {
 
     const formData = this.contactForm.value;
 
-    // Send email using a serverless function or email API
-    // For now, we'll use a simple HTTP POST to a backend endpoint
-    // You can replace this with EmailJS, SendGrid, or your own backend
+    // Send to our Vercel serverless function
+    // This will send two emails:
+    // 1. To info@kemetgarment.com with the inquiry details
+    // 2. Auto-reply to the customer confirming receipt
+    this.http.post<{ ok: boolean; error?: string }>('/api/contact', {
+      companyName: formData.companyName,
+      contactPerson: formData.contactPerson,
+      email: formData.email,
+      projectDetails: formData.projectDetails,
+      honeypot: formData.honeypot
+    }).subscribe({
+      next: (response) => {
+        if (response.ok) {
+          this.submitting.set(false);
+          this.submitSuccess.set(true);
+          this.contactForm.reset();
 
-    const emailData = {
-      to: 'info@kemetgarment.com',
-      subject: `New Contact Form Submission from ${formData.companyName}`,
-      html: `
-        <h2>New Contact Form Submission</h2>
-        <p><strong>Company Name:</strong> ${formData.companyName}</p>
-        <p><strong>Contact Person:</strong> ${formData.contactPerson}</p>
-        <p><strong>Email:</strong> ${formData.email}</p>
-        <p><strong>Project Details:</strong></p>
-        <p>${formData.projectDetails}</p>
-      `
-    };
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            this.submitSuccess.set(false);
+          }, 5000);
+        } else {
+          // Server returned ok: false
+          console.error('Server error:', response.error);
+          this.submitting.set(false);
+          this.submitError.set(true);
 
-    // Using FormSubmit.co with auto-reply enabled
-    const formSubmitUrl = 'https://formsubmit.co/ajax/info@kemetgarment.com';
-
-    fetch(formSubmitUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
+          // Hide error message after 5 seconds
+          setTimeout(() => {
+            this.submitError.set(false);
+          }, 5000);
+        }
       },
-      body: JSON.stringify({
-        _subject: `New Contact from ${formData.companyName}`,
-        'Company Name': formData.companyName,
-        'Contact Person': formData.contactPerson,
-        'Email': formData.email,
-        'Project Details': formData.projectDetails,
-        _captcha: 'false', // Disable captcha for easier testing
-        _autoresponse: 'Thank you for contacting Kemet Garment! We have received your inquiry and will get back to you as soon as possible. Our team typically responds within 24-48 hours during business days.',
-        _replyto: formData.email // Send auto-reply to the user's email
-      })
-    })
-    .then(response => response.json())
-    .then(data => {
-      this.submitting.set(false);
-      this.submitSuccess.set(true);
-      this.contactForm.reset();
+      error: (error) => {
+        console.error('Error sending email:', error);
+        this.submitting.set(false);
+        this.submitError.set(true);
 
-      // Hide success message after 5 seconds
-      setTimeout(() => {
-        this.submitSuccess.set(false);
-      }, 5000);
-    })
-    .catch(error => {
-      console.error('Error sending email:', error);
-      this.submitting.set(false);
-      this.submitError.set(true);
-
-      // Hide error message after 5 seconds
-      setTimeout(() => {
-        this.submitError.set(false);
-      }, 5000);
+        // Hide error message after 5 seconds
+        setTimeout(() => {
+          this.submitError.set(false);
+        }, 5000);
+      }
     });
   }
 }
