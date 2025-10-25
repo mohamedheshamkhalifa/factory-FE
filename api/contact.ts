@@ -138,13 +138,18 @@ async function handler(
         pass: SMTP_PASS
       },
       // Additional options for better compatibility with Namecheap PrivateEmail
+      authMethod: 'LOGIN', // Try LOGIN instead of PLAIN
       tls: {
         rejectUnauthorized: false, // Some Namecheap servers need this
-        ciphers: 'SSLv3'
+        minVersion: 'TLSv1'
       },
       // Debug logging
-      logger: true,
-      debug: false
+      logger: false,
+      debug: false,
+      // Connection timeout
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 10000
     });
 
     console.log('Transporter created. Verifying connection...');
