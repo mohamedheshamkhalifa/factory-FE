@@ -146,19 +146,6 @@
             }
           </div>
 
-          <!-- Honeypot field - hidden from users, catches bots -->
-          <div class="form-group" style="position: absolute; left: -9999px; opacity: 0; pointer-events: none;" aria-hidden="true">
-            <label for="honeypot">Leave this field empty</label>
-            <input
-              type="text"
-              id="honeypot"
-              name="honeypot"
-              formControlName="honeypot"
-              tabindex="-1"
-              autocomplete="off"
-            />
-          </div>
-
           <button type="submit" class="form-submit" [disabled]="submitting()">
             @if (submitting()) {
               <span>Sending...</span>

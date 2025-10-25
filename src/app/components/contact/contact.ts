@@ -25,8 +25,7 @@ export class Contact {
       companyName: ['', [Validators.required, Validators.minLength(2)]],
       contactPerson: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      projectDetails: ['', [Validators.required, Validators.minLength(10)]],
-      honeypot: [''] // Spam trap - should remain empty
+      projectDetails: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
 
@@ -53,49 +52,46 @@ export class Contact {
 
     const formData = this.contactForm.value;
 
-    // Send to our Vercel serverless function
-    // This will send two emails:
-    // 1. To info@kemetgarment.com with the inquiry details
-    // 2. Auto-reply to the customer confirming receipt
-    this.http.post<{ ok: boolean; error?: string }>('/api/contact', {
-      companyName: formData.companyName,
-      contactPerson: formData.contactPerson,
-      email: formData.email,
-      projectDetails: formData.projectDetails,
-      honeypot: formData.honeypot
-    }).subscribe({
-      next: (response) => {
-        if (response.ok) {
-          this.submitting.set(false);
-          this.submitSuccess.set(true);
-          this.contactForm.reset();
+    // Using FormSubmit.co - simple and reliable email forwarding service
+    const formSubmitUrl = 'https://formsubmit.co/ajax/info@kemetgarment.com';
 
-          // Hide success message after 5 seconds
-          setTimeout(() => {
-            this.submitSuccess.set(false);
-          }, 5000);
-        } else {
-          // Server returned ok: false
-          console.error('Server error:', response.error);
-          this.submitting.set(false);
-          this.submitError.set(true);
-
-          // Hide error message after 5 seconds
-          setTimeout(() => {
-            this.submitError.set(false);
-          }, 5000);
-        }
+    fetch(formSubmitUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
-      error: (error) => {
-        console.error('Error sending email:', error);
-        this.submitting.set(false);
-        this.submitError.set(true);
+      body: JSON.stringify({
+        _subject: `New Contact from ${formData.companyName}`,
+        'Company Name': formData.companyName,
+        'Contact Person': formData.contactPerson,
+        'Email': formData.email,
+        'Project Details': formData.projectDetails,
+        _captcha: 'false',
+        _autoresponse: 'Thank you for contacting Kemet Garment! We have received your inquiry and will get back to you within 24-48 hours (business days).',
+        _replyto: formData.email
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      this.submitting.set(false);
+      this.submitSuccess.set(true);
+      this.contactForm.reset();
 
-        // Hide error message after 5 seconds
-        setTimeout(() => {
-          this.submitError.set(false);
-        }, 5000);
-      }
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        this.submitSuccess.set(false);
+      }, 5000);
+    })
+    .catch(error => {
+      console.error('Error sending email:', error);
+      this.submitting.set(false);
+      this.submitError.set(true);
+
+      // Hide error message after 5 seconds
+      setTimeout(() => {
+        this.submitError.set(false);
+      }, 5000);
     });
   }
 }
