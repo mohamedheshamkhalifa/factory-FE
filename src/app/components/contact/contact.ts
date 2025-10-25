@@ -53,7 +53,8 @@ export class Contact {
     const formData = this.contactForm.value;
 
     // Using FormSubmit.co - simple and reliable email forwarding service
-    const formSubmitUrl = 'https://formsubmit.co/ajax/info@kemetgarment.com';
+    // Using verification code instead of plain email for security
+    const formSubmitUrl = 'https://formsubmit.co/ajax/5c3829c5b6fde38dfec256387cc721ae';
 
     fetch(formSubmitUrl, {
       method: 'POST',
