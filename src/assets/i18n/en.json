@@ -41,11 +41,10 @@
     "manufacturing": {
       "title": "Manufacturing Facilities",
       "items": [
-        "300+ industrial sewing machines",
+        "150+ industrial sewing machines",
         "Advanced cutting and pattern-making technology",
-        "In-house embroidery and printing services",
-        "Quality control laboratory",
-        "Modern fabric storage and handling systems"
+        "In-house embroidery and printing services transitioning toward outsourced specialization",
+        "Seamless production line integration"
       ]
     },
     "production": {
@@ -65,11 +64,11 @@
       },
       "skilledTeam": {
         "title": "Skilled Team",
-        "desc": "500+ experienced workers"
+        "desc": "150+ experienced workers"
       },
       "isoCertified": {
-        "title": "ISO Certified",
-        "desc": "Quality management system"
+        "title": "ISO Certification",
+        "desc": "ISO 9001 Quality Management System in progress"
       }
     }
   },
