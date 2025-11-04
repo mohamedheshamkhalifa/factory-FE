@@ -19,6 +19,35 @@
     "unitsPerMonth": "Units/Month",
     "onTimeDelivery": "On-Time Delivery"
   },
+  "factoryNumbers": {
+    "title": "Building Excellence from the Ground Up",
+    "founded": {
+      "label": "Founded",
+      "value": "2025 – Alexandria, Egypt"
+    },
+    "capacity": {
+      "label": "Capacity",
+      "value": "Targeting 10 000 garments daily (~300 000 monthly)"
+    },
+    "focus": {
+      "label": "Focus",
+      "value": "End-to-end garment manufacturing & finishing"
+    },
+    "quality": {
+      "label": "Quality",
+      "value": "ISO 9001 Quality Management System – certification in progress"
+    }
+  },
+  "qualityCommitment": {
+    "title": "Our Commitment to Quality",
+    "description": "Kemet Garment is built on transparency and continuous improvement. Our certification journey is underway, and our processes already align with international standards.",
+    "items": [
+      "Precision stitching with standardized work instructions",
+      "100% inspection before packing",
+      "Sustainable fabric sourcing on request",
+      "On-time production and transparent communication"
+    ]
+  },
   "whyEgypt": {
     "title": "Why Egyptian Manufacturing?",
     "subtitle": "Strategic advantages that make Alexandria your ideal manufacturing partner.",
@@ -114,11 +143,11 @@
       "title": "Contact Information",
       "location": {
         "label": "Factory Location",
-        "value": "Alexandria Industrial Zone\nAlexandria, Egypt"
+        "value": "Qetaa an Nahdah, Amreya 1\nAlexandria Governorate 5253101, Egypt"
       },
       "phone": {
         "label": "Phone",
-        "value": "+20 (XXX) XXX-XXXX"
+        "value": "+20 111 771 1147"
       },
       "email": {
         "label": "Email",
@@ -127,7 +156,7 @@
     },
     "businessHours": {
       "title": "Business Hours",
-      "text": "Sunday - Thursday: 8:00 AM - 5:00 PM (EET)\nFriday - Saturday: Closed"
+      "text": "Sunday - Thursday: 7:30 AM - 4:30 PM (Egypt Time)\nFriday - Saturday: Closed"
     },
     "form": {
       "title": "Request a Quote",
