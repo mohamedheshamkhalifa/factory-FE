@@ -19,20 +19,49 @@
     "unitsPerMonth": "Einheiten/Monat",
     "onTimeDelivery": "Pünktliche Lieferung"
   },
+  "factoryNumbers": {
+    "title": "Exzellenz von Grund auf aufbauen",
+    "founded": {
+      "label": "Gegründet",
+      "value": "2025 – Alexandria, Ägypten"
+    },
+    "capacity": {
+      "label": "Kapazität",
+      "value": "Ziel: 10.000 Kleidungsstücke täglich (~300.000 monatlich)"
+    },
+    "focus": {
+      "label": "Fokus",
+      "value": "End-to-End-Bekleidungsherstellung & Veredelung"
+    },
+    "quality": {
+      "label": "Qualität",
+      "value": "ISO 9001 Qualitätsmanagementsystem – Zertifizierung in Bearbeitung"
+    }
+  },
+  "qualityCommitment": {
+    "title": "Unser Engagement für Qualität",
+    "description": "Kemet Garment basiert auf Transparenz und kontinuierlicher Verbesserung. Unsere Zertifizierungsreise läuft, und unsere Prozesse entsprechen bereits internationalen Standards.",
+    "items": [
+      "Präzisionsnähte mit standardisierten Arbeitsanweisungen",
+      "100% Inspektion vor dem Verpacken",
+      "Nachhaltige Stoffbeschaffung auf Anfrage",
+      "Pünktliche Produktion und transparente Kommunikation"
+    ]
+  },
   "whyEgypt": {
     "title": "Warum ägyptische Fertigung?",
-    "subtitle": "Strategische Vorteile, die Alexandria zu Ihrem idealen Fertigungspartner machen",
+    "subtitle": "Strategische Vorteile, die Alexandria zu Ihrem idealen Fertigungspartner machen.",
     "strategicLocation": {
       "title": "Strategische Lage",
-      "desc": "Der Hafen von Alexandria bietet einfachen Zugang zu Europa, dem Nahen Osten und Afrika. Präferenzielle Handelsabkommen mit EU- und USA-Märkten."
+      "desc": "Der Hafen von Alexandria bietet schnellen, kosteneffizienten Zugang zu Europa, dem Nahen Osten und Afrika, unterstützt durch präferenzielle Handelsabkommen mit der EU und den USA."
     },
     "costCompetitive": {
       "title": "Kosteneffizient",
-      "desc": "30-40% Kosteneinsparungen im Vergleich zur westlichen Fertigung ohne Kompromisse bei der Qualität. Maximieren Sie Ihre Margen bei gleichbleibenden Standards."
+      "desc": "30–40% Kosteneinsparungen im Vergleich zur westlichen Fertigung ohne Kompromisse bei der Qualität. Maximieren Sie Ihre Margen bei Einhaltung globaler Standards."
     },
     "exportReady": {
       "title": "Exportbereit",
-      "desc": "ISO 9001:2015 zertifiziert. Vollständige Einhaltung internationaler Standards und Erfahrung in der globalen Versandlogistik."
+      "desc": "ISO 9001 Qualitätsmanagementsystem in Bearbeitung. Entwickelt zur Erfüllung internationaler Compliance-Anforderungen mit Erfahrung in globaler Versandlogistik."
     }
   },
   "capabilities": {
@@ -41,11 +70,10 @@
     "manufacturing": {
       "title": "Fertigungsanlagen",
       "items": [
-        "300+ industrielle Nähmaschinen",
+        "150+ industrielle Nähmaschinen",
         "Fortschrittliche Schneid- und Schnittmustertechnologie",
-        "Interne Stickerei- und Druckdienste",
-        "Qualitätskontrolllabor",
-        "Moderne Stofflager- und Handhabungssysteme"
+        "Interne Stickerei- und Druckdienste mit Übergang zur ausgelagerten Spezialisierung",
+        "Nahtlose Produktionslinienintegration"
       ]
     },
     "production": {
@@ -65,11 +93,11 @@
       },
       "skilledTeam": {
         "title": "Qualifiziertes Team",
-        "desc": "500+ erfahrene Mitarbeiter"
+        "desc": "150+ erfahrene Mitarbeiter"
       },
       "isoCertified": {
-        "title": "ISO-zertifiziert",
-        "desc": "Qualitätsmanagementsystem"
+        "title": "ISO-Zertifizierung",
+        "desc": "ISO 9001 Qualitätsmanagementsystem in Bearbeitung"
       }
     }
   },
@@ -115,11 +143,11 @@
       "title": "Kontaktinformationen",
       "location": {
         "label": "Fabrikstandort",
-        "value": "Alexandria Industrial Zone\nAlexandria, Ägypten"
+        "value": "Qetaa an Nahdah, Amreya 1\nAlexandria Gouvernement 5253101, Ägypten"
       },
       "phone": {
         "label": "Telefon",
-        "value": "+20 (XXX) XXX-XXXX"
+        "value": "+20 111 771 1147"
       },
       "email": {
         "label": "E-Mail",
@@ -128,7 +156,7 @@
     },
     "businessHours": {
       "title": "Geschäftszeiten",
-      "text": "Sonntag - Donnerstag: 8:00 - 17:00 Uhr (OEZ)\nFreitag - Samstag: Geschlossen"
+      "text": "Sonntag - Donnerstag: 7:30 - 16:30 Uhr (Ägyptische Zeit)\nFreitag - Samstag: Geschlossen"
     },
     "form": {
       "title": "Angebot anfordern",

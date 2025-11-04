@@ -19,20 +19,49 @@
     "unitsPerMonth": "Ünite/Ay",
     "onTimeDelivery": "Zamanında Teslimat"
   },
+  "factoryNumbers": {
+    "title": "Temelden Mükemmellik İnşa Etmek",
+    "founded": {
+      "label": "Kuruluş",
+      "value": "2025 – İskenderiye, Mısır"
+    },
+    "capacity": {
+      "label": "Kapasite",
+      "value": "Günlük 10.000 parça hedefleniyor (~aylık 300.000)"
+    },
+    "focus": {
+      "label": "Odak",
+      "value": "Uçtan uca giyim üretimi ve son işlemler"
+    },
+    "quality": {
+      "label": "Kalite",
+      "value": "ISO 9001 Kalite Yönetim Sistemi – sertifikasyon devam ediyor"
+    }
+  },
+  "qualityCommitment": {
+    "title": "Kalite Taahhüdümüz",
+    "description": "Kemet Garment şeffaflık ve sürekli iyileştirme üzerine kurulmuştur. Sertifikasyon sürecimiz devam ediyor ve süreçlerimiz zaten uluslararası standartlara uygun.",
+    "items": [
+      "Standartlaştırılmış çalışma talimatlarıyla hassas dikiş",
+      "Paketlemeden önce %100 kontrol",
+      "İstek üzerine sürdürülebilir kumaş tedariki",
+      "Zamanında üretim ve şeffaf iletişim"
+    ]
+  },
   "whyEgypt": {
     "title": "Neden Mısır Üretimi?",
-    "subtitle": "İskenderiye'yi ideal üretim ortağınız yapan stratejik avantajlar",
+    "subtitle": "İskenderiye'yi ideal üretim ortağınız yapan stratejik avantajlar.",
     "strategicLocation": {
       "title": "Stratejik Konum",
-      "desc": "İskenderiye limanı Avrupa, Orta Doğu ve Afrika'ya kolay erişim sağlar. AB ve ABD pazarları ile tercihli ticaret anlaşmaları."
+      "desc": "İskenderiye limanı, AB ve ABD ile tercihli ticaret anlaşmaları tarafından desteklenen Avrupa, Orta Doğu ve Afrika'ya hızlı, maliyet-etkin erişim sağlar."
     },
     "costCompetitive": {
       "title": "Maliyet Avantajlı",
-      "desc": "Kaliteden ödün vermeden Batı üretimine göre %30-40 maliyet tasarrufu. Standartları korurken kar marjlarınızı maksimize edin."
+      "desc": "Kaliteden ödün vermeden Batı üretimine kıyasla %30-40 maliyet tasarrufu. Küresel standartları korurken kar marjlarınızı maksimize edin."
     },
     "exportReady": {
       "title": "İhracata Hazır",
-      "desc": "ISO 9001:2015 sertifikalı. Uluslararası standartlara tam uyum ve küresel nakliye lojistiğinde deneyim."
+      "desc": "ISO 9001 Kalite Yönetim Sistemi devam ediyor. Uluslararası uyum gereksinimlerini karşılamak üzere tasarlandı ve küresel nakliye lojistiğinde deneyimli."
     }
   },
   "capabilities": {
@@ -41,11 +70,10 @@
     "manufacturing": {
       "title": "Üretim Tesisleri",
       "items": [
-        "300+ endüstriyel dikiş makinesi",
+        "150+ endüstriyel dikiş makinesi",
         "Gelişmiş kesim ve kalıp yapma teknolojisi",
-        "Dahili nakış ve baskı hizmetleri",
-        "Kalite kontrol laboratuvarı",
-        "Modern kumaş depolama ve işleme sistemleri"
+        "Dış kaynak uzmanlaşmasına geçiş yapan dahili nakış ve baskı hizmetleri",
+        "Kesintisiz üretim hattı entegrasyonu"
       ]
     },
     "production": {
@@ -65,11 +93,11 @@
       },
       "skilledTeam": {
         "title": "Uzman Ekip",
-        "desc": "500+ deneyimli çalışan"
+        "desc": "150+ deneyimli çalışan"
       },
       "isoCertified": {
-        "title": "ISO Sertifikalı",
-        "desc": "Kalite yönetim sistemi"
+        "title": "ISO Sertifikası",
+        "desc": "ISO 9001 Kalite Yönetim Sistemi devam ediyor"
       }
     }
   },
@@ -115,11 +143,11 @@
       "title": "İletişim Bilgileri",
       "location": {
         "label": "Fabrika Konumu",
-        "value": "Alexandria Sanayi Bölgesi\nİskenderiye, Mısır"
+        "value": "Qetaa an Nahdah, Amreya 1\nİskenderiye 5253101, Mısır"
       },
       "phone": {
         "label": "Telefon",
-        "value": "+20 (XXX) XXX-XXXX"
+        "value": "+20 111 771 1147"
       },
       "email": {
         "label": "E-posta",
@@ -128,7 +156,7 @@
     },
     "businessHours": {
       "title": "Çalışma Saatleri",
-      "text": "Pazar - Perşembe: 08:00 - 17:00 (EEST)\nCuma - Cumartesi: Kapalı"
+      "text": "Pazar - Perşembe: 07:30 - 16:30 (Mısır Saati)\nCuma - Cumartesi: Kapalı"
     },
     "form": {
       "title": "Teklif İste",
