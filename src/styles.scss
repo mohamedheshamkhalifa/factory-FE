@@ -1,4 +1,78 @@
-/* Global Styles */
+/* ============================================
+   KEMET GARMENT - GLOBAL DESIGN SYSTEM
+   Luxe B2B Manufacturing Website
+   ============================================ */
+
+/* CSS Custom Properties - Design Tokens */
+:root {
+  /* Color Palette - Luxe Egyptian Heritage */
+  --color-papyrus-tan: #D7B894;
+  --color-deep-black: #0C0C0C;
+  --color-off-white: #FAF7F2;
+  --color-gold: #C2A675;
+  --color-warm-gray: #E8E3DC;
+
+  /* Semantic Color Tokens */
+  --color-primary: var(--color-papyrus-tan);
+  --color-primary-hover: var(--color-gold);
+  --color-text-primary: var(--color-deep-black);
+  --color-text-secondary: #57534e;
+  --color-bg-primary: var(--color-off-white);
+  --color-bg-secondary: #ffffff;
+  --color-border: var(--color-warm-gray);
+
+  /* Typography - Inter Font System (Garet alternative) */
+  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Font Sizes - Fluid Typography */
+  --font-size-hero: clamp(2.25rem, 5vw, 3.75rem); /* 36-60px */
+  --font-size-h1: clamp(2rem, 4vw, 3rem); /* 32-48px */
+  --font-size-h2: clamp(1.75rem, 3vw, 2.25rem); /* 28-36px */
+  --font-size-h3: clamp(1.25rem, 2vw, 1.5rem); /* 20-24px */
+  --font-size-body: clamp(1rem, 2vw, 1.25rem); /* 16-20px */
+  --font-size-body-sm: clamp(0.875rem, 1.5vw, 1rem); /* 14-16px */
+  --font-size-caption: clamp(0.75rem, 1vw, 0.875rem); /* 12-14px */
+
+  /* Spacing Scale */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+  --spacing-4xl: 6rem;     /* 96px */
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;     /* 8px */
+  --radius-md: 0.75rem;    /* 12px */
+  --radius-lg: 1rem;       /* 16px */
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 12px rgba(12, 12, 12, 0.08);
+  --shadow-medium: 0 8px 20px rgba(12, 12, 12, 0.12);
+  --shadow-lift: 0 20px 40px rgba(12, 12, 12, 0.15);
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index Scale */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-tooltip: 1060;
+}
 
 /* Reset and base styles */
 * {
@@ -9,64 +83,168 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Accessibility styles */
 :focus-visible {
-  outline: 2px solid #D7B894;
+  outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+  border-radius: 2px;
 }
 
+/* Respect user motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 body {
   min-height: 100vh;
-  background-color: #fafaf9;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  color: #1c1917;
+  background-color: var(--color-bg-primary);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+  line-height: 1.7;
+  letter-spacing: -0.01em;
 }
 
 /* Landing page wrapper */
 .landing-page {
   min-height: 100vh;
-  background-color: #fafaf9;
+  background-color: var(--color-bg-primary);
 }
 
 /* Container - used across all sections */
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
-}
-
-/* Section Headers - used across multiple components */
-.section-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1c1917;
-  margin-bottom: 1rem;
-  font-family: Georgia, serif;
+  padding: 0 var(--spacing-lg);
 
   @media (min-width: 768px) {
-    font-size: 3rem;
+    padding: 0 var(--spacing-2xl);
   }
 }
 
+/* Section Headers - Enhanced with design tokens */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
+
+  /* Optional animation class - add .animate-on-scroll to enable */
+  &.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity var(--transition-slow), transform var(--transition-slow);
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.section-title {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-family-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
 .section-subtitle {
-  font-size: 1.25rem;
-  color: #57534e;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-secondary);
   max-width: 48rem;
   margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Utility Classes - Reusable components */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  background-color: var(--color-primary);
+  color: var(--color-deep-black);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-soft);
+
+  &:hover {
+    background-color: var(--color-primary-hover);
+    transform: scale(1.03) translateY(-2px);
+    box-shadow: var(--shadow-medium);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+  }
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md) var(--spacing-2xl);
+  background-color: transparent;
+  color: var(--color-text-primary);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-body-sm);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+  border: 2px solid var(--color-text-primary);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-base);
+
+  &:hover {
+    background-color: var(--color-text-primary);
+    color: var(--color-off-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Card Base Component */
+.card {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-soft);
+  transition: all var(--transition-base);
+
+  &:hover {
+    box-shadow: var(--shadow-lift);
+    transform: translateY(-8px);
+  }
 }
 
 /* RTL Support - Global right-to-left styles */

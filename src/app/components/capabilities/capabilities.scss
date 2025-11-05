@@ -21,11 +21,12 @@
 }
 
 .capability-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1c1917;
-  margin-bottom: 1.5rem;
-  font-family: Georgia, serif;
+  font-size: var(--font-size-h3, 1.5rem);
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-text-primary, #0C0C0C);
+  margin-bottom: var(--spacing-lg, 1.5rem);
+  font-family: var(--font-family-primary, 'Inter', sans-serif);
+  letter-spacing: -0.01em;
 }
 
 .capability-list {
@@ -71,12 +72,15 @@
 }
 
 .badge-title {
-  font-weight: 700;
-  color: #1c1917;
-  margin-bottom: 0.5rem;
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-text-primary, #0C0C0C);
+  margin-bottom: var(--spacing-sm, 0.5rem);
+  font-family: var(--font-family-primary, 'Inter', sans-serif);
 }
 
 .badge-desc {
-  color: #57534e;
-  font-size: 0.875rem;
+  color: var(--color-text-secondary, #57534e);
+  font-size: var(--font-size-caption, 0.875rem);
+  font-family: var(--font-family-primary, 'Inter', sans-serif);
+  line-height: 1.6;
 }

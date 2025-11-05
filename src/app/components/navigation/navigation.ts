@@ -1,4 +1,4 @@
-import { Component, signal, HostListener } from '@angular/core';
+import { Component, signal, HostListener, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService, Language } from '../../services/translation';
 
@@ -13,11 +13,20 @@ export class Navigation {
   scrolled = signal(false);
   languageMenuOpen = signal(false);
 
-  constructor(public translate: TranslationService) {}
+  constructor(public translate: TranslationService, private elementRef: ElementRef) {}
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     this.scrolled.set(window.scrollY > 50);
+  }
+
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    // Close language menu if clicked outside
+    const clickedInside = this.elementRef.nativeElement.querySelector('.language-switcher')?.contains(event.target);
+    if (!clickedInside && this.languageMenuOpen()) {
+      this.languageMenuOpen.set(false);
+    }
   }
 
   toggleMobileMenu() {

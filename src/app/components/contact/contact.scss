@@ -14,11 +14,12 @@
 }
 
 .contact-info-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1c1917;
-  margin-bottom: 1.5rem;
-  font-family: Georgia, serif;
+  font-size: var(--font-size-h3, 1.5rem);
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-text-primary, #0C0C0C);
+  margin-bottom: var(--spacing-lg, 1.5rem);
+  font-family: var(--font-family-primary, 'Inter', sans-serif);
+  letter-spacing: -0.01em;
 }
 
 .contact-info-list {
@@ -73,11 +74,12 @@
 }
 
 .form-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #1c1917;
-  margin-bottom: 1.5rem;
-  font-family: Georgia, serif;
+  font-size: var(--font-size-h3, 1.5rem);
+  font-weight: var(--font-weight-bold, 700);
+  color: var(--color-text-primary, #0C0C0C);
+  margin-bottom: var(--spacing-lg, 1.5rem);
+  font-family: var(--font-family-primary, 'Inter', sans-serif);
+  letter-spacing: -0.01em;
 }
 
 .form {
@@ -119,16 +121,26 @@
 
 .form-submit {
   width: 100%;
-  background-color: #1c1917;
-  color: #fafaf9;
+  background-color: var(--color-primary, #D7B894);
+  color: var(--color-deep-black, #0C0C0C);
   padding: 1rem 1.5rem;
   border: none;
+  border-radius: var(--radius-lg, 1rem);
   cursor: pointer;
-  font-weight: 700;
-  transition: background-color 0.3s;
+  font-weight: var(--font-weight-bold, 700);
+  font-family: var(--font-family-primary, 'Inter', sans-serif);
+  font-size: 1rem;
+  transition: all var(--transition-base, 0.3s);
+  box-shadow: var(--shadow-soft, 0 4px 12px rgba(12, 12, 12, 0.08));
 
   &:hover:not(:disabled) {
-    background-color: #292524;
+    background-color: var(--color-primary-hover, #C2A675);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium, 0 8px 20px rgba(12, 12, 12, 0.12));
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.98);
   }
 
   &:disabled {
