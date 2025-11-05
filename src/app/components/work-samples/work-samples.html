@@ -1,0 +1,130 @@
+<section class="work-samples">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 class="section-title">Our Work</h2>
+      <p class="section-subtitle">
+        A selection of garments produced at Kemet Garment, reflecting our versatility and finishing quality.
+      </p>
+    </div>
+
+    <!-- Tan Divider -->
+    <div class="divider"></div>
+
+    <!-- 4×2 Product Gallery Grid -->
+    <div class="work-samples-grid">
+      @for (image of images; track image.src; let i = $index) {
+        <button
+          type="button"
+          class="work-sample-card"
+          (click)="openLightbox(i)"
+          [attr.aria-label]="'View ' + image.alt + ' in full size'"
+        >
+          <div class="image-wrapper">
+            <img
+              [src]="image.src"
+              [alt]="image.alt"
+              loading="lazy"
+              decoding="async"
+              class="work-sample-image"
+            />
+            <div class="hover-border"></div>
+          </div>
+        </button>
+      }
+    </div>
+  </div>
+
+  <!-- Lightbox Overlay (Portal) -->
+  @if (isLightboxOpen) {
+    <div
+      class="lightbox-overlay"
+      (click)="closeLightbox()"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Image gallery viewer"
+    >
+      <!-- Close Button -->
+      <button
+        type="button"
+        class="lightbox-close"
+        (click)="closeLightbox()"
+        aria-label="Close gallery viewer"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <!-- Previous Button -->
+      <button
+        type="button"
+        class="lightbox-prev"
+        (click)="previousImage($event)"
+        aria-label="Previous image"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Next Button -->
+      <button
+        type="button"
+        class="lightbox-next"
+        (click)="nextImage($event)"
+        aria-label="Next image"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Current Image -->
+      <div class="lightbox-content" (click)="$event.stopPropagation()">
+        <img
+          [src]="images[currentImageIndex].src"
+          [alt]="images[currentImageIndex].alt"
+          class="lightbox-image"
+        />
+        <p class="lightbox-caption">
+          {{ images[currentImageIndex].alt }}
+        </p>
+        <p class="lightbox-counter">
+          {{ currentImageIndex + 1 }} / {{ images.length }}
+        </p>
+      </div>
+    </div>
+  }
+</section>

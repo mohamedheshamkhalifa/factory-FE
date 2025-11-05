@@ -5,6 +5,8 @@ import { Navigation } from './components/navigation/navigation';
 import { Hero } from './components/hero/hero';
 import { WhyEgypt } from './components/why-egypt/why-egypt';
 import { Capabilities } from './components/capabilities/capabilities';
+import { InsideKemet } from './components/inside-kemet/inside-kemet';
+import { WorkSamples } from './components/work-samples/work-samples';
 import { Services } from './components/services/services';
 import { Cta } from './components/cta/cta';
 import { Contact } from './components/contact/contact';
@@ -18,6 +20,8 @@ import { Footer } from './components/footer/footer';
     Hero,
     WhyEgypt,
     Capabilities,
+    InsideKemet,
+    WorkSamples,
     Services,
     Cta,
     Contact,

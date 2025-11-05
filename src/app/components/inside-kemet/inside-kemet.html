@@ -1,0 +1,31 @@
+<section class="inside-kemet">
+  <div class="container">
+    <!-- Section Header -->
+    <div class="section-header">
+      <h2 class="section-title">Inside Kemet Garment</h2>
+      <p class="section-subtitle">A glimpse into our operations, people, and logistics.</p>
+    </div>
+
+    <!-- Tan Divider -->
+    <div class="divider"></div>
+
+    <!-- 3-Card Grid -->
+    <div class="inside-kemet-grid">
+      @for (image of images; track image.src) {
+        <div class="inside-kemet-card">
+          <div class="image-wrapper">
+            <img
+              [src]="image.src"
+              [alt]="image.alt"
+              loading="lazy"
+              decoding="async"
+              class="inside-kemet-image"
+            />
+            <div class="image-overlay"></div>
+          </div>
+          <p class="image-caption">{{ image.caption }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

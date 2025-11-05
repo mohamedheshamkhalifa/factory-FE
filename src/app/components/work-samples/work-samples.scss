@@ -1,0 +1,328 @@
+// Work Samples Gallery Section
+// Minimalist, export-ready premium aesthetic with Papyrus Tan #D7B894 accents
+
+.work-samples {
+  padding: 6rem 0;
+  background-color: #F8F8F8;
+
+  @media (min-width: 768px) {
+    padding: 8rem 0;
+  }
+}
+
+// Centered tan divider
+.divider {
+  width: 4rem;
+  height: 2px;
+  background-color: #D7B894;
+  margin: 0 auto 4rem;
+}
+
+// Responsive grid: 1 col mobile, 2 col tablet, 4 col desktop
+.work-samples-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @media (min-width: 640px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}
+
+// Card button (clickable for lightbox)
+.work-sample-card {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #D7B894;
+    outline-offset: 4px;
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.75rem; // rounded-xl
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    .work-sample-image {
+      transform: scale(1.05);
+    }
+
+    .hover-border {
+      opacity: 1;
+    }
+  }
+}
+
+.work-sample-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5; // Portrait ratio suitable for apparel
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+// Thin bottom border in Papyrus Tan on hover
+.hover-border {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #D7B894;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+// ============================================
+// LIGHTBOX STYLES (Dependency-free overlay)
+// ============================================
+
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(12, 12, 12, 0.95); // Almost black with slight transparency
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Close button (top-right)
+.lightbox-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10001;
+
+  &:hover {
+    background: rgba(215, 184, 148, 0.3);
+    transform: scale(1.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #D7B894;
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+// Previous button (left side)
+.lightbox-prev {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: white;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10001;
+
+  &:hover {
+    background: rgba(215, 184, 148, 0.3);
+    transform: translateY(-50%) translateX(-4px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #D7B894;
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 640px) {
+    left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+// Next button (right side)
+.lightbox-next {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  color: white;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10001;
+
+  &:hover {
+    background: rgba(215, 184, 148, 0.3);
+    transform: translateY(-50%) translateX(4px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #D7B894;
+    outline-offset: 2px;
+  }
+
+  @media (max-width: 640px) {
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+// Lightbox content container
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+// Lightbox image
+.lightbox-image {
+  max-width: 100%;
+  max-height: calc(90vh - 6rem);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+// Caption below image
+.lightbox-caption {
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 600px;
+  margin: 0;
+  line-height: 1.5;
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
+}
+
+// Image counter (e.g., "3 / 8")
+.lightbox-counter {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  text-align: center;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+// RTL Support
+[dir="rtl"] {
+  .work-samples-grid {
+    direction: rtl;
+  }
+
+  .lightbox-close {
+    left: 1.5rem;
+    right: auto;
+  }
+
+  .lightbox-prev {
+    left: auto;
+    right: 2rem;
+    transform: translateY(-50%) scaleX(-1);
+
+    &:hover {
+      transform: translateY(-50%) scaleX(-1) translateX(-4px);
+    }
+
+    @media (max-width: 640px) {
+      right: 1rem;
+    }
+  }
+
+  .lightbox-next {
+    right: auto;
+    left: 2rem;
+    transform: translateY(-50%) scaleX(-1);
+
+    &:hover {
+      transform: translateY(-50%) scaleX(-1) translateX(4px);
+    }
+
+    @media (max-width: 640px) {
+      left: 1rem;
+    }
+  }
+}
