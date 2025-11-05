@@ -13,11 +13,19 @@
 
 .footer-grid {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
   margin-bottom: 2rem;
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1.5fr 1fr 1fr; // Give logo section more space
+    max-width: 1000px; // Centered layout
+    margin-left: auto;
+    margin-right: auto;
+    justify-items: start; // Align content to start of each column
+  }
+
+  @media (min-width: 1024px) {
+    gap: 4rem; // More spacing on larger screens
   }
 }
 

@@ -21,35 +21,35 @@ export class WorkSamples {
   @Input() images: WorkSampleImage[] = [
     {
       src: 'assets/website images/14407cd6-22a8-44db-9236-11fb32862794.png',
-      alt: 'Utopia streetwear t-shirt with bold graphic print'
+      alt: 'Kemet Garment manufactured Utopia streetwear t-shirt with bold graphic print showing custom screen printing and premium cotton garment production quality from Egypt'
     },
     {
       src: 'assets/website images/a655585c-a03f-4599-a148-15d269fe9a50.png',
-      alt: 'Green Is The New Cool long sleeve shirt with eco-friendly message'
+      alt: 'Green Is The New Cool long sleeve shirt with eco-friendly message manufactured by Kemet Garment showing sustainable fashion and quality textile finishing'
     },
     {
       src: 'assets/website images/5cd7fe6c-fb61-4b16-8b4d-b436532f6373.png',
-      alt: 'Cultiva sweatshirt with embroidered branding'
+      alt: 'Cultiva sweatshirt with embroidered branding produced by Kemet Garment Alexandria showcasing premium embroidery techniques and quality fleece garment manufacturing'
     },
     {
       src: 'assets/website images/161ee087-0f2f-4960-b4d1-f5040b814452.png',
-      alt: 'Black Squad hoodie front view with premium finishing'
+      alt: 'Black Squad hoodie front view with premium finishing manufactured by Kemet Garment Egypt showing quality hoodie production and professional garment construction'
     },
     {
       src: 'assets/website images/a7e2292a-acad-4cb8-a49a-a7c9dd5a563d.png',
-      alt: 'Butterfly hoodie featuring embroidery and vinyl details'
+      alt: 'Butterfly design hoodie featuring embroidery and vinyl heat transfer details produced by Kemet Garment showing versatile decoration techniques and quality apparel manufacturing'
     },
     {
       src: 'assets/website images/b0aa4fa1-96b1-4c1d-a40c-e99d21a204f9.png',
-      alt: 'Saints of House hoodie back print showcasing detailed graphics'
+      alt: 'Saints of House hoodie back print showcasing detailed screen printed graphics manufactured by Kemet Garment Alexandria demonstrating precision printing and quality control'
     },
     {
       src: 'assets/website images/60b0a178-a582-4166-9753-167046c9b269.png',
-      alt: 'Checked trousers in green and blue colorway'
+      alt: 'Checked trousers in green and blue colorway produced by Kemet Garment Egypt showing quality pattern cutting sewing and finishing for woven garment manufacturing'
     },
     {
       src: 'assets/website images/98436a84-adf9-4831-b8d0-7ef1c5461620.png',
-      alt: 'Kids Paw Patrol sweatshirt with licensed character design'
+      alt: 'Kids Paw Patrol licensed character sweatshirt manufactured by Kemet Garment showing expertise in licensed apparel production and quality kids garment manufacturing'
     }
   ];
 

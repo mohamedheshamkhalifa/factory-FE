@@ -3,10 +3,24 @@
 
 .inside-kemet {
   padding: 6rem 0;
-  background-color: #fafaf9;
+  background-color: #ffffff; // White background for contrast with grey Capabilities section
 
   @media (min-width: 768px) {
     padding: 8rem 0;
+  }
+
+  // Custom section title styling with Montserrat
+  .section-title {
+    font-family: 'Montserrat', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  // Custom section subtitle styling with Open Sans
+  .section-subtitle {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 }
 
@@ -43,11 +57,12 @@
   width: 100%;
   overflow: hidden;
   border-radius: 0.75rem; // rounded-xl equivalent
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); // Smooth easing
 
   &:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.06);
+    transform: translateY(-4px); // Subtle lift on hover
 
     .inside-kemet-image {
       transform: scale(1.05);
@@ -91,6 +106,8 @@
   text-align: center;
   margin: 0;
   padding: 0.5rem 0;
+  letter-spacing: -0.01em; // Tighter letter spacing for premium look
+  line-height: 1.4;
 
   @media (min-width: 768px) {
     font-size: 1.25rem;

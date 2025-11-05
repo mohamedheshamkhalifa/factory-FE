@@ -3,10 +3,24 @@
 
 .work-samples {
   padding: 6rem 0;
-  background-color: #F8F8F8;
+  background-color: #F5F1ED; // Warm light beige/papyrus for contrast with white InsideKemet section
 
   @media (min-width: 768px) {
     padding: 8rem 0;
+  }
+
+  // Custom section title styling with Montserrat
+  .section-title {
+    font-family: 'Montserrat', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  // Custom section subtitle styling with Open Sans
+  .section-subtitle {
+    font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
   }
 }
 
@@ -44,15 +58,20 @@
   cursor: pointer;
   display: block;
   width: 100%;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px); // More pronounced lift
+  }
+
+  &:active {
+    transform: translateY(-2px); // Subtle press effect
   }
 
   &:focus-visible {
     outline: 2px solid #D7B894;
     outline-offset: 4px;
+    border-radius: 0.75rem;
   }
 }
 
@@ -61,11 +80,12 @@
   width: 100%;
   overflow: hidden;
   border-radius: 0.75rem; // rounded-xl
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: #ffffff; // White background for product images
 
   &:hover {
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.14), 0 10px 10px -5px rgba(0, 0, 0, 0.08);
 
     .work-sample-image {
       transform: scale(1.05);
@@ -93,10 +113,11 @@
   bottom: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background-color: #D7B894;
+  height: 4px;
+  background: linear-gradient(90deg, #D7B894 0%, #C9A97A 50%, #D7B894 100%); // Gradient for premium look
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 -2px 8px rgba(215, 184, 148, 0.3); // Subtle glow
 }
 
 // ============================================
